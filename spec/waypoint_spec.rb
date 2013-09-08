@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe GPX2::Waypoint do
-  let(:doc) { GPX2::Document.parse(GPX_FIXTURE_PATH) }
+  let(:doc) { GPX2::Document.parse_file(GPX_FIXTURE_PATH) }
   let(:waypoint) { doc.tracks.first.segments.first.trackpoints[3] }
 
   it "should have a latitude" do

@@ -12,13 +12,21 @@ module GPX2
       new.tap { |doc| doc.parse(file) }
     end
 
+    def self.parse_file(file)
+      parse(File.open(file))
+    end
+
     def initialize
       @tracks = []
     end
 
-    def parse(file)
+    def parse(data)
       parser = Nokogiri::XML::SAX::Parser.new(Parser.new(self))
-      parser.parse(File.open(file))
+      parser.parse(data)
+    end
+
+    def parse_file(file)
+      parse(File.open(file))
     end
   end
 end

@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe GPX2::Track do
-  let(:doc) { GPX2::Document.parse(GPX_FIXTURE_PATH) }
+  let(:doc) { GPX2::Document.parse_file(GPX_FIXTURE_PATH) }
   let(:track) { doc.tracks.first }
 
   it "should have tracks" do

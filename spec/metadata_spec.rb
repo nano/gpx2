@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe GPX2::Metadata do
-  let(:doc) { GPX2::Document.parse(GPX_FIXTURE_PATH) }
+  let(:doc) { GPX2::Document.parse_file(GPX_FIXTURE_PATH) }
   let(:time) { Time.utc(2013, 8, 25, 13, 29, 11) }
 
   it "should have a name" do

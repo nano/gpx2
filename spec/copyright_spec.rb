@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe GPX2::Copyright do
-  let(:doc) { GPX2::Document.parse(GPX_FIXTURE_PATH) }
+  let(:doc) { GPX2::Document.parse_file(GPX_FIXTURE_PATH) }
   let(:copyright) { doc.metadata.copyright }
 
   it "should have a year" do
