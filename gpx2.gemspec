@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "nokogiri", "~> 1.6.0"
   gem.add_development_dependency "rspec", "~> 2.14.1"
+  gem.add_development_dependency "rake"
 end
